@@ -1,0 +1,23 @@
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <input
+      name="important beacuse of Standlone"
+      type="text"
+      placeholder="Add you Today Work"
+      [(ngModel)]="inputValue"
+    />
+    @if(editInfo){
+    <button type="submit">Update</button>
+    } @else {
+    <button type="submit">Add</button>
+    }
+  </form>
+</div>
+
+<div>
+  <app-todo-list
+    [listData]="todoList"
+    (editValue)="edit($event)"
+    (deleteValue)="delete($event)"
+  ></app-todo-list>
+</div>
