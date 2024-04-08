@@ -13,4 +13,12 @@ export class TodoListComponent {
   @Input() listData: TodoList[] = [];
   @Output() editValue = new EventEmitter<TodoList>();
   @Output() deleteValue = new EventEmitter<number>();
+
+  update(event:TodoList){
+    this.editValue.emit(event);
+  }
+
+  delete(event:number){
+    this.deleteValue.emit(event)
+  }
 }

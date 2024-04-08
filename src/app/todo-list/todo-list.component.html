@@ -7,8 +7,10 @@
       </p>
     </div>
     <div class="btn-tag">
-      <button type="button" (click)="editValue.emit(item)">Edit</button>
-      <button type="button" (click)="deleteValue.emit(index)">Delete</button>
+      <!-- <button type="button" (click)="editValue.emit(item)">Edit</button>
+      <button type="button" (click)="deleteValue.emit(index)">Delete</button> -->
+      <button type="button" (click)="update(item)">Edit</button>
+      <button type="button" (click)="delete(index)">Delete</button>
     </div>
   </div>
   } @empty {
