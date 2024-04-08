@@ -1,10 +1,16 @@
 <ul>
   @for (item of listData; track item.id; let index = $index){
-  <li>
-    {{ item.value }}
-    <button type="button" (click)="editValue.emit(item)">Edit</button>
-    <button type="button" (click)="deleteValue.emit(index)">Delete</button>
-  </li>
+  <div class="items">
+    <div class="value">
+      <p>
+        {{index+1}}. {{ item.value }}
+      </p>
+    </div>
+    <div class="btn-tag">
+      <button type="button" (click)="editValue.emit(item)">Edit</button>
+      <button type="button" (click)="deleteValue.emit(index)">Delete</button>
+    </div>
+  </div>
   } @empty {
   <li>List of Todos</li>
   }

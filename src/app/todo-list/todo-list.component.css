@@ -1,0 +1,15 @@
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 50%;
+}
+
+p{
+    max-width: 150px;
+}
+
+.btn-tag{
+    display: flex;
+    gap:4px;
+}
